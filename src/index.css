@@ -1,0 +1,242 @@
+@import url('https://googleapis.com');
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  
+  min-width: 320px;
+  
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.app-container{
+  height: 585px;
+  width: 100dvw;
+  background-color:white;
+  border-radius:16px;
+  color:black;
+  overflow:hidden
+}
+.header{
+  display: flex;
+  align-content: space-between;
+  
+}
+.header-left,
+.header-right,
+.header-center{
+  flex: 1;
+}
+.header-left{
+  text-align: left;
+  align-items: flex-start;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.dev-mode-disabled{
+  background-color:rgb(241, 242, 246);
+  color: darkslategrey;
+  border-radius:15px;
+  padding: 9px ;
+  transition: all 0.2s ease;
+  border: 1px solid lightgrey;
+  outline:none;
+  
+}
+.dev-mode-disabled:focus{
+  outline:none
+}
+.dev-mode-disabled:hover{
+  border: 1px solid black;
+}
+.dev-mode-enabled{
+  background-color: rgb(53, 93, 253);
+  color:white;
+  border: none;
+  padding: 9px ;
+  outline: none;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  
+}
+.dev-mode-enabled:focus{
+  outline:none
+}
+
+
+
+.heading{
+  margin-top:5px;
+  margin-bottom:0;
+  font-size:25px;
+  font-family:"Plus Jakarta Sans", sans-serif;
+}
+
+.online{
+  margin-top:0;
+  margin-bottom:5px;
+  font-size:17px;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color:rgb(10, 241, 149)
+}
+.chat-container{
+  border:1px solid lightGrey;
+  height: 435px;
+  width: 100%;
+  overflow-y:auto;
+  background-color:rgb(241, 242, 246);
+  color:black;
+  scrollbar-color: #d1dbec #f3f4f6;
+  scrollbar-width: thin;
+  
+}
+.messages-container{
+  display:flex;
+  
+}
+.welcome{
+  
+  font-family: cursive;
+  margin:10px;
+  font-family: 15px;
+  padding:9px;
+  color:grey;
+  
+  
+}
+
+.messages{
+  font-family: "Inter", sans-serif;
+  height: fit-content;
+  margin:10px;
+  border-radius:16px;
+  padding:9px;
+  max-width:60%;
+  text-align:left;
+  width:fit-content;
+}
+.messages_user{
+  background-color: rgb(53, 93, 253);
+  color: white
+}
+.messages_assistant{
+  background-color: white;
+  color: black
+}
+.messages-intent{
+  font-family: "Noto Sans", sans-serif;
+  color:gray
+}
+
+.loading{
+  display:flex;
+  justify-content:flex-start;
+  height: fit-content;
+  margin:10px;
+  border-radius:16px;
+  padding:9px;
+  max-width:60%;
+  text-align:left;
+  width:fit-content;
+  background-color:white;
+  color:grey;
+  font-style:italic
+}
+.input-box{
+  font-family: "Inter", sans-serif;
+  box-sizing:border-box;
+  padding-left:14px;
+  padding-right:14px;
+  margin:12px;
+  border:1px solid lightgrey;
+  font-size:15px;
+  height: 40px;
+  width:700px;
+  background-color:white;
+  border-radius:24px;
+  color:black;
+  transition: all 0.2s ease;
+}
+.input-box:focus{
+  border-color: rgb(53, 93, 253);
+  outline : none
+}
+
+.button{
+  background-color:rgb(53, 93, 253);
+  border-radius:24px;
+  padding: 9px ;
+  transition: all 0.2s ease;
+}
+.button:hover{
+  background-color: blue;
+}
+.button:focus{
+  outline:none
+}
+
+
+
+
