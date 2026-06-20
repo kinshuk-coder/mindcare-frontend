@@ -1,16 +1,51 @@
-# React + Vite
+#  MindCare: Frontend UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the user-facing client for **MindCare**, a cloud-native AI mental health assistant. Built for speed and seamless UX, this React application acts as the presentation layer, connecting to a decoupled RAG-powered (Retrieval-Augmented Generation) microservice backend.
 
-Currently, two official plugins are available:
+##  Live Demo
+* **Frontend Application:** [mindcare-frontend-teal.vercel.app](https://mindcare-frontend-teal.vercel.app)
+* **Backend Repository:** [View API Architecture here](https://github.com/kinshuk-coder/mindcare-backend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Architecture & Tech Stack
 
-## React Compiler
+**Core Technologies:**
+* **Framework:** React.js bootstrapped with Vite for ultra-fast Hot Module Replacement (HMR) and optimized production builds.
+* **Hosting/Edge Network:** Deployed on Vercel for global edge caching and instant continuous deployments.
+* **State Management:** Utilizes browser `localStorage` to generate and persist unique session UUIDs. 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**API Integration:**
+* Communicates directly with a custom FastAPI microservice hosted on Render.
+* Strictly adheres to CORS policies, ensuring secure, restricted data transfer between the Vercel client and the Render server.
 
-## Expanding the ESLint configuration
+##  Key Engineering Decisions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Client-Side Session Generation:** To keep the backend entirely stateless, the frontend generates a unique UUID on the user's first visit. This ID is passed in the header of every request, allowing the backend to route semantic memory fetches (via Pinecone/MongoDB) without requiring heavy user authentication systems.
+* **Optimistic UI Rendering:** Chat messages are rendered instantly to the UI while awaiting the HTTP response from the AI backend, preventing visual lag and ensuring a natural, fluid conversational experience.
+
+##  Local Setup & Installation
+
+**1. Clone the repository**
+```bash
+git clone [https://github.com/kinshuknarang/mindcare-frontend.git](https://github.com/kinshuknarang/mindcare-frontend.git)
+cd mindcare-frontend
+```
+
+**2. Install dependencies**
+```bash
+npm install
+```
+
+**3. Configure Environment Variables**
+Create a `.env` file in the root directory and add your backend API URL. (If using Vite, environment variables must start with `VITE_`):
+```text
+VITE_API_URL=[https://mindcare-backend-2cv2.onrender.com](https://mindcare-backend-2cv2.onrender.com)
+```
+
+**4. Run the development server**
+```bash
+npm run dev
+```
+*Note: The frontend will run on `http://localhost:5173` by default. Ensure this port is whitelisted in your backend CORS configuration for local testing.*
+
+##  Author
+* **Kinshuk** - Sole Architect & Developer
