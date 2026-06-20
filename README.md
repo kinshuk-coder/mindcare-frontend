@@ -26,7 +26,7 @@ This is the user-facing client for **MindCare**, a cloud-native AI mental health
 
 **1. Clone the repository**
 ```bash
-git clone [https://github.com/kinshuknarang/mindcare-frontend.git](https://github.com/kinshuknarang/mindcare-frontend.git)
+git clone [https://github.com/kinshuk-coder/mindcare-frontend.git](https://github.com/kinshuk-coder/mindcare-frontend.git)
 cd mindcare-frontend
 ```
 
