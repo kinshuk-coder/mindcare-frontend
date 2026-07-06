@@ -26,7 +26,7 @@ This is the user-facing client for **MindCare**, a cloud-native AI mental health
 
 **1. Clone the repository**
 ```bash
-git clone [https://github.com/kinshuk-coder/mindcare-frontend.git](https://github.com/kinshuk-coder/mindcare-frontend.git)
+git clone https://github.com/kinshuk-coder/mindcare-frontend.git
 cd mindcare-frontend
 ```
 
@@ -38,7 +38,7 @@ npm install
 **3. Configure Environment Variables**
 Create a `.env` file in the root directory and add your backend API URL. (If using Vite, environment variables must start with `VITE_`):
 ```text
-VITE_API_URL=[https://mindcare-backend-2cv2.onrender.com](https://mindcare-backend-2cv2.onrender.com)
+VITE_API_URL=https://mindcare-backend-2cv2.onrender.com
 ```
 
 **4. Run the development server**
