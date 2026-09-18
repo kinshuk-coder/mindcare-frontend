@@ -38,7 +38,7 @@ npm install
 **3. Configure Environment Variables**
 Create a `.env` file in the root directory and add your backend API URL. (If using Vite, environment variables must start with `VITE_`):
 ```text
-VITE_API_URL=https://mindcare-backend-2cv2.onrender.com
+VITE_API_URL=https://mindcare-backend-3bbw.onrender.com
 ```
 
 **4. Run the development server**

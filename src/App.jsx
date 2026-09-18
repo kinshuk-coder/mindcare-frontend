@@ -92,7 +92,7 @@ export default function App(){
   // function to retrieve the history for specific session_id from backend
   useEffect(() => {
     async function fetchData(){
-      const response = await fetch(`https://mindcare-backend-2cv2.onrender.com/history/${sessionId}`)
+      const response = await fetch(`https://mindcare-backend-3bbw.onrender.com/history/${sessionId}`)
       const history = await response.json()
 
 
@@ -120,7 +120,7 @@ export default function App(){
     setIsLoading(true)
 
     try{
-    const response = await fetch("https://mindcare-backend-2cv2.onrender.com/chat",{
+    const response = await fetch("https://mindcare-backend-3bbw.onrender.com/chat",{
       method : "POST",
       headers : {"content-type":"application/json"},
       body : JSON.stringify({user_message:userMessage,
